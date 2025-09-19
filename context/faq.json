@@ -1,0 +1,149 @@
+{
+    "user_management": [
+      {
+        "question": "How do I create a new user in HotelOpsAI?",
+        "answer": "Navigate to Settings > User Management, click '+ Create New User', fill in the basic information, assign privileges, optionally add personal information, and click 'Create User' to finalize."
+      },
+      {
+        "question": "Is it mandatory to provide both email and phone number while creating a user?",
+        "answer": "No. Either an email address or a phone number is mandatory."
+      },
+      {
+        "question": "What are the privilege levels available for users?",
+        "answer": "The privilege levels are: Company Level, Property Level, Facility User, and Division User."
+      },
+      {
+        "question": "Can I assign a user to multiple departments or properties?",
+        "answer": "A user can be assigned to one property and one department at a time."
+      },
+      {
+        "question": "How can I edit an existing user's details?",
+        "answer": "Click the three-dot menu next to the user, select 'Edit User Details', modify the fields as needed, and click 'Save Changes'."
+      },
+      {
+        "question": "Will the changes take effect immediately after editing a user?",
+        "answer": "Edited information will take effect only after the user logs in again."
+      },
+      {
+        "question": "How do I assign or modify user permissions?",
+        "answer": "Click the three-dot menu next to the user, select 'Edit Permissions', toggle access for different modules, and click 'Save'."
+      },
+      {
+        "question": "Which modules can permissions be assigned for?",
+        "answer": "Modules include Dashboard, Feedback, Trip Advisor, Guest Entry, Housekeeping, CRM, Template, Service, Report, Settings, Marketing, Survey, Review, User, Pulse App, Document, Task, KRA, Audit, Budget, MOM, Scheduler, Log, Incidents, Employee Connect, Gate Pass, Petty Cash, Inspection, PPM, Quality, IRD Menu, and Property Information."
+      },
+      {
+        "question": "How can I reset a user's password?",
+        "answer": "Click the three-dot menu next to the user, select 'Reset Password', enter a new password, optionally click 'Show Password', and then click 'Reset Password'. Only a Company Admin can perform this action."
+      },
+      {
+        "question": "How do I block a user?",
+        "answer": "In User Management, click the three-dot menu next to the user, select 'Block User'. The user's status changes to 'Blocked' and access is restricted."
+      },
+      {
+        "question": "How do I delete a user?",
+        "answer": "In User Management, click the three-dot menu next to the user, select 'Delete User', confirm the deletion. The user account is permanently removed."
+      },
+      {
+        "question": "Can a blocked user log in again?",
+        "answer": "No, a blocked user's access is restricted until unblocked by an administrator."
+      },
+      {
+        "question": "Can a deleted user be restored?",
+        "answer": "No, deleted users cannot be restored. You must create a new account if needed."
+      },
+      {
+        "question": "How do I assign a role to a new user?",
+        "answer": "During user creation or editing, select the appropriate role under the 'Privileges' section based on the level and department."
+      },
+      {
+        "question": "What personal information can be added for a user?",
+        "answer": "Optional personal information includes Address Line 1, Address Line 2, City, State, Country, Language, and Profile Picture."
+      },
+      {
+        "question": "Can I search for users by role, department, or property?",
+        "answer": "Yes, the User Management Dashboard provides search and filter options to locate users by department, role, or property."
+      },
+      {
+        "question": "Who can reset passwords for users?",
+        "answer": "Only Company Admins can reset passwords for other users."
+      },
+      {
+        "question": "How can I invite a new user to the system?",
+        "answer": "Click the three-dot menu next to the user and select 'Send Invite'. Invitations can be sent via WhatsApp, SMS, or Email."
+      },
+      {
+        "question": "Can I manage the devices linked to a user?",
+        "answer": "Yes, click the three-dot menu next to the user and select 'Manage Devices' to view and control linked devices."
+      },
+      {
+        "question": "What happens if I change a user's department or role?",
+        "answer": "The user will have access and permissions corresponding to the new department or role upon their next login."
+      }
+    ],
+
+    "work_order_management": [
+      {
+        "question": "What is the primary function and purpose of the HotelOpsAI Work Order Module?",
+        "answer": "The HotelOpsAI Work Order Module is designed to help hotel administrators and staff manage service requests, complaints, and maintenance tasks efficiently. Its purpose is to enable structured issue tracking, departmental assignments, and resolution tracking in order to streamline hotel operations."
+      },
+      {
+        "question": "What are the key operational features supported by the Work Order Module?",
+        "answer": "The key features include Service Request & Complaint Management, Department-Based Assignment (ensuring tasks are directed to the appropriate team), defining Priority Levels (categorizing tasks by urgency), setting Service Level Agreements (SLA) to define response times, Action Tracking (to modify, update, or delete work orders), and Bulk Service Management, allowing administrators to predefine and manage work order service types."
+      },
+      {
+        "question": "As an Administrator, how do I access the module settings to manage work order services in bulk?",
+        "answer": "To access the Work Order Service Master page, follow these steps: Click on **Settings** from the left sidebar menu \u2192 Expand **Other Settings** \u2192 Click on **Configuration** \u2192 Select **Work Order Settings** \u2192 Click on **Service**."
+      },
+      {
+        "question": "What information is visible on the Work Order Service Master Overview page?",
+        "answer": "The Service Master page displays predefined work order services, including the service type, the assigned department, priority level, assigned team, the Service Level Agreement (SLA), and available actions."
+      },
+      {
+        "question": "What are the dashboard features available on the Work Order Service Master page for bulk management?",
+        "answer": "The available dashboard features are the **Search Bar** (to quickly find specific services), **Filters** (to refine results), **Add New** (to create a new work order service), **Export** (to download the work order list), and **Clear Filter** (to reset applied filters)."
+      },
+      {
+        "question": "What specific details are required when creating a new Work Order Service (Admin function)?",
+        "answer": "When creating a new service by clicking 'Add New', the required fields are: **Service Name** (e.g., AC Maintenance Issue), **Type** (must be Complaint or Request), **Department** (e.g., Engineering, Housekeeping), **Priority** (must be Low, Medium, High, or Critical), **Assigned To** (the responsible Team or user), **SLA (Service Level Agreement)**, which is the response time measured in minutes, and **Keyword** (for relevant keywords)."
+      },
+      {
+        "question": "How are existing work order services modified or deleted by an Administrator?",
+        "answer": "To **edit** a service, click the Edit (\u270f) icon to modify details and save changes. To **delete** a service, click the Delete (\ud83d\uddd1) icon and confirm the deletion."
+      },
+      {
+        "question": "How do general staff members access the Work Order Module for execution and management?",
+        "answer": "Staff members must first log in to the system. Then, from the left navigation panel, click **Operations**, and under Operations, select **Work Order**. Available sub-modules include Dashboard, All Work Orders, Reports, and Settings."
+      },
+      {
+        "question": "What key information does the Work Order Dashboard provide?",
+        "answer": "The Work Order Dashboard offers an overview of all active, completed, and on-hold work orders. This includes the total number of work orders, counts of open, on-hold, and completed work orders, work statistics (such as resolution time and execution time), the most requested services and complaints, and escalation details. Users can navigate the dashboard and use the date filter to view specific time periods."
+      },
+      {
+        "question": "When viewing 'All Work Orders,' what details are displayed for tracking?",
+        "answer": "When accessing 'All Work Orders,' staff can view details including the Work Order Number (#ID), Service Type, Status (Open, On Hold, Done), Priority (Low, Medium, High), Request Type (Complaint, Maintenance, etc.), Created By (the user who raised the request), Assigned To (the responsible personnel), and Location. Staff can also use the search bar to filter these work orders."
+      },
+      {
+        "question": "What information is required when creating a new Work Order (Staff function)?",
+        "answer": "When clicking '+ Create New Work Order', staff must fill in the required fields: **Service Type**, **Description of the issue**, **Priority level**, **Assigned personnel**, and **Location details**."
+      },
+      {
+        "question": "How is work order execution tracked and managed by staff?",
+        "answer": "Staff can view pending, in-progress, and completed statuses. They can also reassign work orders if necessary, monitor SLA compliance, and generate reports for service efficiency."
+      },
+      {
+        "question": "What specific types of reports are available within the Work Order Reports section?",
+        "answer": "The system provides several reports for tracking and analyzing work orders, including the **Service Report** (summarizing work orders by service type), **Location Report** (categorizing work orders by location), **Department Report** (grouping work orders by department), and the **Insight Report** (providing analytics on work order trends)."
+      },
+      {
+        "question": "How does a user generate a report in the Work Order Module?",
+        "answer": "To generate a report, navigate to **Reports** under the Work Order menu \u2192 Select the type of report needed \u2192 Apply filters (such as date range or status) \u2192 Export the report if required."
+      },
+      {
+        "question": "Beyond the Service Master, what general configurations can be modified under the Work Order Settings?",
+        "answer": "To configure general work order settings, navigate to Settings > Other Settings > Configuration > Work Order Settings > Service. Preferences that can be modified and saved include **work order categories**, **assignment rules**, and **escalation settings**."
+      }
+    ]
+    
+  }
+  

@@ -1,0 +1,6 @@
+streamlit
+langchain
+langgraph  # if using OpenAI/Gemini wrapper APIs
+google-generativeai  # for Gemini 1.5 Flash
+langchain_community
+python-dotenv
