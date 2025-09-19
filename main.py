@@ -1,7 +1,12 @@
 import streamlit as st
 import json
+import traceback
 from agents.support_agent import build_agent
 from tools import user_tools, service_tools, troubleshooting, faq_tools
+from logger_config import (
+    main_logger, agent_logger, error_logger, log_action, 
+    log_error
+)
 
 # Configure page
 st.set_page_config(
@@ -38,32 +43,59 @@ with col1:
     
     if user_input:
         with st.spinner("Processing..."):
-            # Generate session ID based on Streamlit session
-            session_id = st.session_state.get('session_id', 'default')
-            if 'session_id' not in st.session_state:
-                import uuid
-                st.session_state.session_id = str(uuid.uuid4())[:8]
-                session_id = st.session_state.session_id
-            
-            result = st.session_state.agent.invoke({
-                "query": user_input, 
-                "session_id": session_id,
-                "conversation_state": "idle",  # Initialize state
-                "session_data": {}  # Initialize data
-            })
-            
-            # Handle different possible result formats
-            if result and "response" in result:
-                response = result["response"]
-            elif result:
-                # If result exists but no response key, try to extract the response
-                response = str(result)
-            else:
-                response = "I'm sorry, I couldn't process your request."
+            try:
+                # Generate session ID based on Streamlit session
+                session_id = st.session_state.get('session_id', 'default')
+                if 'session_id' not in st.session_state:
+                    import uuid
+                    st.session_state.session_id = str(uuid.uuid4())[:8]
+                    session_id = st.session_state.session_id
+                    log_action("SESSION_START", f"New session created: {session_id}")
+                
+                # Log user input
+                log_action("USER_INPUT", f"Query: {user_input[:100]}{'...' if len(user_input) > 100 else ''}", session_id=session_id)
+                
+                # Invoke agent
+                agent_logger.info(f"Invoking agent for session {session_id}")
+                result = st.session_state.agent.invoke({
+                    "query": user_input, 
+                    "session_id": session_id,
+                    "conversation_state": "idle",  # Initialize state
+                    "session_data": {}  # Initialize data
+                })
+                
+                # Handle different possible result formats
+                if result and "response" in result:
+                    response = result["response"]
+                    log_action("AGENT_RESPONSE", f"Success: {response[:100]}{'...' if len(response) > 100 else ''}", session_id=session_id)
+                elif result:
+                    # If result exists but no response key, try to extract the response
+                    response = str(result)
+                    log_error("RESPONSE_FORMAT", f"Unexpected result format: {type(result)}", session_id=session_id)
+                else:
+                    response = "I'm sorry, I couldn't process your request."
+                    log_error("EMPTY_RESULT", "Agent returned None result", session_id=session_id)
 
-            st.session_state.chat_history.append(("You", user_input))
-            st.session_state.chat_history.append(("Agent", response))
-            st.rerun()
+                st.session_state.chat_history.append(("You", user_input))
+                st.session_state.chat_history.append(("Agent", response))
+                
+                log_action("CHAT_UPDATE", f"Added to history. Total messages: {len(st.session_state.chat_history)}", session_id=session_id)
+                st.rerun()
+                
+            except Exception as e:
+                error_msg = str(e)
+                error_traceback = traceback.format_exc()
+                
+                # Log the full error
+                log_error("CRITICAL_ERROR", f"{error_msg}\n{error_traceback}", session_id=session_id)
+                
+                # Show user-friendly error
+                st.error(f"❌ **Error:** {error_msg}")
+                
+                # Also add to chat history for debugging
+                st.session_state.chat_history.append(("You", user_input))
+                st.session_state.chat_history.append(("System Error", f"Error: {error_msg}"))
+                st.rerun()
 
 with col2:
     st.header("🔧 Debug Panel")
@@ -71,7 +103,9 @@ with col2:
     # Clear chat button
     if st.button("🗑️ Clear Chat History"):
         st.session_state.chat_history = []
+        log_action("CHAT_CLEAR", "Chat history cleared by user")
         st.rerun()
+    
     
     # Show example queries
     with st.expander("💡 Example Queries"):

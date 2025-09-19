@@ -228,6 +228,10 @@ Thumbs.db
 # Project specific data files (optional - remove if you want to commit user data)
 context/users.json
 
+# Logs directory
+logs/
+*.log
+
 # Temporary files
 *.tmp
 *.temp

@@ -2,6 +2,7 @@ from typing import Dict, Any, Optional, Tuple
 from .user_data_manager import user_manager
 from .session_manager import session_manager, ConversationState
 from context.role_context import get_contextual_prompt
+from logger_config import user_mgmt_logger, session_logger, log_user_mgmt, log_action, log_error
 
 class InteractiveUserManager:
     """Handles interactive user management with multi-turn conversations"""
