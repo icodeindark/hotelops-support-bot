@@ -3,4 +3,8 @@ langchain
 langgraph  # if using OpenAI/Gemini wrapper APIs
 google-generativeai  # for Gemini 1.5 Flash
 langchain_community
+langchain_google_genai  # for Gemini embeddings
 python-dotenv
+phonenumbers
+email-validator
+chromadb  # for RAG vector search

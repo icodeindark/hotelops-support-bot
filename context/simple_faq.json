@@ -1,0 +1,29 @@
+{
+  "How do I reset my password in HotelOpsAI?": "Navigate to Settings > Account > Reset Password. Enter your email address and follow the instructions sent to your email.",
+  
+  "How do I create a new user account?": "Go to User Management > Add User. Fill in the required fields: First Name, Last Name, Email, and Role. Phone number is optional.",
+  
+  "What are the different user privilege levels?": "HotelOpsAI has 4 privilege levels: Company Level (full access), Property Level (property-specific access), Facility User (department access), and Division User (limited access).",
+  
+  "Is email or phone number mandatory for user creation?": "Either email OR phone number is required, but not both. You must provide at least one contact method.",
+  
+  "How do I update user permissions?": "Go to User Management > Find User > Edit Permissions. Select the appropriate privilege level and department access.",
+  
+  "How do I add a new service to the system?": "Navigate to Service Management > Add Service. Provide service name, description, pricing, and SLA time if applicable.",
+  
+  "What is the work order workflow in HotelOpsAI?": "Work orders follow this flow: Creation → Assignment → In Progress → Quality Check → Completion → Customer Feedback → Closure.",
+  
+  "How do I access the mobile app features?": "Download the HotelOpsAI mobile app from your app store. Log in with your existing credentials to access mobile-optimized features.",
+  
+  "How do I set up room service requests?": "Go to Service Management > Room Service. Configure menu items, pricing, delivery times, and staff assignments.",
+  
+  "When did HotelOpsAI start?": "HotelOpsAI was founded in 2020 to revolutionize hotel operations through AI-powered management systems.",
+  
+  "What housekeeping procedures are standard?": "Standard procedures include: Room inspection checklist, cleaning protocols, inventory management, and quality assurance checks.",
+  
+  "How do I generate reports in HotelOpsAI?": "Navigate to Reports > Select report type > Choose date range > Configure filters > Generate Report. Reports can be exported as PDF or Excel.",
+  
+  "How do I manage guest check-in/check-out?": "Use the Front Desk module > Guest Management. Scan ID, verify reservation, assign room key, collect payment if needed.",
+  
+  "What are the system requirements for HotelOpsAI?": "Minimum: Windows 10/macOS 10.15, 8GB RAM, 10GB storage, Chrome/Firefox browser, stable internet connection."
+}

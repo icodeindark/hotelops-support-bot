@@ -1,0 +1,55 @@
+{
+  "guest_checkin": {
+    "title": "Guest Check-in Procedure",
+    "steps": [
+      "Greet guest warmly and verify identification",
+      "Confirm reservation details in the system",
+      "Process payment and security deposit if required",
+      "Program room key cards and test functionality",
+      "Explain hotel amenities and Wi-Fi access",
+      "Provide property map and emergency information",
+      "Escort guest to room if requested"
+    ]
+  },
+  
+  "room_cleaning": {
+    "title": "Standard Room Cleaning Protocol",
+    "steps": [
+      "Knock and announce housekeeping before entering",
+      "Check room status and note any maintenance issues",
+      "Strip and replace all linens and towels",
+      "Clean and sanitize bathroom thoroughly",
+      "Vacuum carpets and mop hard surfaces",
+      "Dust all furniture and surfaces",
+      "Restock amenities and supplies",
+      "Final quality inspection before checkout"
+    ]
+  },
+  
+  "maintenance_request": {
+    "title": "Maintenance Request Processing",
+    "steps": [
+      "Receive and log maintenance request in system",
+      "Assess urgency level (Emergency/High/Medium/Low)",
+      "Assign to appropriate maintenance technician",
+      "Notify guest of expected resolution timeframe",
+      "Complete repair and test functionality",
+      "Update system with completion status",
+      "Follow up with guest for satisfaction"
+    ]
+  },
+  
+  "guest_complaint": {
+    "title": "Guest Complaint Resolution",
+    "steps": [
+      "Listen actively and empathetically to guest concerns",
+      "Document complaint details in guest profile",
+      "Apologize sincerely and take ownership",
+      "Investigate the issue thoroughly",
+      "Offer appropriate compensation or solution",
+      "Implement resolution promptly",
+      "Follow up to ensure guest satisfaction",
+      "Document outcome for future reference"
+    ]
+  }
+}

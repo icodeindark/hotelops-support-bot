@@ -227,6 +227,7 @@ Thumbs.db
 
 # Project specific data files (optional - remove if you want to commit user data)
 context/users.json
+context/users_data.json
 
 # Logs directory
 logs/
@@ -244,10 +245,35 @@ logs/
 *.sqlite
 *.sqlite3
 
+# ChromaDB vector database
+chroma_db/
+chroma.sqlite3
+
 # Configuration files with sensitive data
 config.json
 secrets.json
+.env
+.env.local
+.env.production
+
+# API keys and credentials
+*.key
+*.pem
+api_keys.json
+credentials.json
+
+# Test files (optional - keep if you want to commit tests)
+test_*.py
+*_test.py
 
 # Backup files
 *.bak
 *.backup
+
+# LLM Cache and temporary files
+*.cache
+llm_cache/
+temp_data/
+
+# Streamlit secrets
+.streamlit/secrets.toml
