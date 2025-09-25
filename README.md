@@ -228,4 +228,3 @@ For questions or issues:
 
 ---
 
-**Built with ❤️ for HotelOpsAI**
